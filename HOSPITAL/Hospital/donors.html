@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Registration</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main class="content px-3 py-2">
+        <div class="container-fluid">
+           
+    
+            <!-- blood donation Form -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title">Blood Donation Registration</h5>
+                </div>
+                <div class="card-body">
+                    <form id="patient Form"> 
+
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4">
+                                <label for="Fullname" class="form-label fw-bold">Fullname</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fa-solid fa-user" style="color:blue"></i></span>
+                                    <input type="text" class="form-control" placeholder="Enter full name" required>
+                                </div>
+                            </div>
+                            
+                                <div class="col-md-4">
+                                    <label for="Contect Number" class="form-label fw-bold">Contect Number</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa-solid fa-phone" style="color: blue;"></i></span>
+                                        <input type="text" class="form-control" placeholder="Enter Contect Number" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Type blood" class="form-label fw-bold">Type Blood</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa-solid fa-droplet" style="color: blue;"></i></span>
+                                    <select class="form-select">
+                                        <option>A+</option>
+                                        <option>B+</option>
+                                        <option>AB+</option>
+                                        <option>O+</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Age" class="form-label fw-bold">Age</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa-solid fa-person" style="color: blue;"></i></span>
+                                        <input type="text" class="form-control" placeholder="Enter Age" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Gender" class="form-label fw-bold">Gender</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa-solid fa-venus-mars" style="color: blue;"></i></span>
+                                    <select class="form-select">
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                   
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Donation Date" class="form-label fw-bold">Donation Date</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa-duotone fa-solid fa-calendar-days" style="color:blue"></i></span>
+                                        <input type="date" class="form-control" id="dob" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Adress" class="form-label fw-bold">Adress</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa-solid fa-location-pin" style="color: blue;"></i></span>
+                                        <input type="text" class="form-control" placeholder="Enter Adress" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Medical History" class="form-label fw-bold">Medical History</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa-solid fa-notes-medical" style="color: blue;"></i></span>
+                                        <textarea type="text" class="form-control" placeholder="Describe Medical History" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Additional Description" class="form-label fw-bold">Additional Description</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa-solid fa-comment" style="color: blue;"></i></span>
+                                        <textarea type="text" class="form-control" placeholder="Enter additional details" required></textarea>
+                                    </div>
+                                </div>
+                                
+                        </div>
+                        <!--Buttons (Save, Delete, Delete, Search) -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-success w-100">Save <i class="fas fa-save"></i></button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-danger w-100">Delete <i class="fas fa-trash"></i></button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-warning w-100">Update <i class="fas fa-pen"></i></button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-info w-100">Search <i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <!-- blood donation Table -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="card-title fw-bold">List of Somali Blood Donors</h6>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Contect</th>
+                                        <th>Blood</th>
+                                        <th>donation Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Aisha Abdalle</td>
+                                        <td>9076655</td>
+                                        <td>A+</td>
+                                        <td>2024-12-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Aisha Abdalle</td>
+                                        <td>9076655</td>
+                                        <td>A+</td>
+                                        <td>2024-12-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Aisha Abdalle</td>
+                                        <td>9076655</td>
+                                        <td>A+</td>
+                                        <td>2024-12-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Aisha Abdalle</td>
+                                        <td>9076655</td>
+                                        <td>A+</td>
+                                        <td>2024-12-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Aisha Abdalle</td>
+                                        <td>9076655</td>
+                                        <td>A+</td>
+                                        <td>2024-12-10</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            
+                <script src="js/bootstrap.js"></script>
+            </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
